@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/buglite/storective/badges/gpa.svg)](https://codeclimate.com/github/buglite/storective)
+
 # Storective
 
 Ruby wrapper for the Apple Search API. It makes easy searching for movies,

@@ -9,6 +9,8 @@ or by id.
 
 ## Installation
 
+*Currently not available outside Github*, at least until we have a beta.
+
 Add this line to your application's Gemfile:
 
 ```ruby

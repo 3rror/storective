@@ -56,5 +56,5 @@ TODO: Write more usage instructions here
 
 ### Legal notes
 
-iTunes Store, App Store, iBookstore and Mac App Store are trademarks of
+Apple, iTunes Store, App Store, iBookstore and Mac App Store are trademarks of
 Apple Inc.

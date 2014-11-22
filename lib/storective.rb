@@ -22,25 +22,17 @@ class Storective
     self.class.debug_output(console)
   end
 
-  private
+  allowed_options = [:term, :country, :media, :entity, :attribute,
+                     :callback, :limit, :lang, :version, :explicit]
 
-  def method_missing(meth, *args, &blk)
-    # Check if meth is a settable option
-    if allowed_params? meth
+  allowed_options.each do |option|
+    define_method option do |*args|
       if args.empty?
-        @settings[meth]
+        @settings[option]
       else
-        @settings[meth] = args.first
+        @settings[option] = args.first
         self
       end
-    else
-      super
     end
-  end
-
-  def allowed_params?(param)
-    allowed_params = [:term, :country, :media, :entity, :attribute,
-                      :callback, :limit, :lang, :version, :explicit]
-    allowed_params.include? param
   end
 end

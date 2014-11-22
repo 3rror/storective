@@ -7,7 +7,7 @@ class Storective
   base_uri 'https://itunes.apple.com'
   format :json
 
-  attr_accessor :settings
+  attr_reader :settings
 
   def initialize(options = {})
     @settings = options

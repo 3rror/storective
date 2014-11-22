@@ -26,6 +26,20 @@ describe Storective do
     default_store.country.must_equal('IT')
   end
 
+  describe "when you want to know what's going on" do
+    it "must allow you to enable debug mode" do
+      default_store.enable_debug
+    end
+
+    it "must allow you to enable debug mode with a custom stdout" do
+      default_store.enable_debug $stderr
+    end
+  end
+
+  it "must allow you to list all the settings" do
+    default_store.settings.must_be_kind_of Hash
+  end
+
   describe 'when you want to search by ID' do
     it "must allow you to specify if it's the artist ID" do
       skip

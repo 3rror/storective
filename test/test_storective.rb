@@ -2,7 +2,13 @@ require 'minitest/autorun'
 require 'storective'
 
 describe Storective do
-  let(:default_store) { Storective.new }
+
+  let(:default_store) do
+     s = Storective.new
+     # HTTParty works at class level, so with this we have a cleaner test output
+     s.enable_debug(nil)
+     s
+  end
 
   describe 'when you want to search for a term' do
     it 'must return an array with the results' do

@@ -28,23 +28,37 @@ Or install it yourself as:
 
 ## Usage
 
-Search for a term:
+If you want to search for a generic term, it's so easy:
+
 ```ruby
 s = Storective.new
 s.search_for('your favorite song')
 ```
 
-Setting options (see [Apple website](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html) for information about options)
+But also if you want to set any option:
+
 ```ruby
 s = Storective.new
 s.limit(1).country('IT').search_for('your favorite song')
 ```
 
+you can also initialize the instance with your options:
+
 ```ruby
-s2 = Storective.new limit: 1, country 'IT'
-s2.search_for('your favorite song')
+s = Storective.new limit: 1, country 'IT'
+s.search_for('your favorite song')
 ```
-TODO: Write more usage instructions here
+*See [Apple website](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html) for the complete options list*
+
+To see what's going on behinde the scene:
+```ruby
+s = Storective.new
+s.enable_debug
+````
+
+## ToDo
+* Implement search by ID
+* Code documentation
 
 ## Contributing
 

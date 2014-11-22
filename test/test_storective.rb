@@ -6,8 +6,8 @@ describe Storective do
 
   describe 'when you want to search for a term' do
     it 'must return an array with the results' do
-      skip # because it can really slow down tests
-      default_store.search_for('test').must_be_kind_of Array
+      #skip # because it can really slow down tests
+      default_store.search_for('Jack Johnson').must_be_kind_of Array
     end
   end
 
@@ -28,11 +28,11 @@ describe Storective do
 
   describe "when you want to know what's going on" do
     it "must allow you to enable debug mode" do
-      default_store.enable_debug
+      Storective.new.enable_debug
     end
 
     it "must allow you to enable debug mode with a custom stdout" do
-      default_store.enable_debug $stderr
+      Storective.new.enable_debug $stderr
     end
   end
 

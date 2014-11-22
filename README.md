@@ -45,7 +45,7 @@ s.limit(1).country('IT').search_for('your favorite song')
 you can also initialize the instance with your options:
 
 ```ruby
-s = Storective.new limit: 1, country 'IT'
+s = Storective.new limit: 1, country: 'IT'
 s.search_for('your favorite song')
 ```
 *See [Apple website](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html) for the complete options list*

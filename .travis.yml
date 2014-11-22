@@ -5,3 +5,5 @@ rvm:
   - ruby-head
   - jruby-head
   - jruby-19mode # JRuby in 1.9 mode
+
+env: CODECLIMATE_REPO_TOKEN=88147bdf2bb815eed1a10270ec20e06c7d2c62dda07f77b210e6d25fb4e17690

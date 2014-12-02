@@ -4,10 +4,7 @@ require 'storective'
 describe Storective do
 
   let(:default_store) do
-     s = Storective.new
-     # HTTParty works at class level, so with this we have a cleaner test output
-     s.enable_debug(nil)
-     s
+     Storective.new
   end
 
   describe 'when you want to search for a term' do
@@ -23,23 +20,13 @@ describe Storective do
     end
 
     it 'must allow you to do it during the initialization' do
-      Storective.new country: 'IT', limit: 1
+      Storective.new(country: 'IT', limit: 1).must_be_instance_of Storective
     end
   end
 
   it 'must allow you to get a previously setted option' do
     default_store.country 'IT'
     default_store.country.must_equal('IT')
-  end
-
-  describe "when you want to know what's going on" do
-    it "must allow you to enable debug mode" do
-      Storective.new.enable_debug
-    end
-
-    it "must allow you to enable debug mode with a custom stdout" do
-      Storective.new.enable_debug $stderr
-    end
   end
 
   it "must allow you to list all the settings" do

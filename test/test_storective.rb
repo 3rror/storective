@@ -9,7 +9,7 @@ describe Storective do
 
   describe 'when you want to search for a term' do
     it 'must return an array with the results' do
-      #skip # because it can really slow down tests
+      skip # because it can really slow down tests
       default_store.search_for('Jack Johnson').must_be_kind_of Array
     end
   end

@@ -50,12 +50,6 @@ s.search_for('your favorite song')
 ```
 *See [Apple website](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html) for the complete options list*
 
-To see what's going on behinde the scene:
-```ruby
-s = Storective.new
-s.enable_debug
-````
-
 ## ToDo
 * Implement search by ID
 * Code documentation
